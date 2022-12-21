@@ -1,6 +1,7 @@
 # Binaries for programs and plugins
 .idea
-*.DS_Store
+.DS_Store
+test/.DS_Store
 *.exe
 *.exe~
 *.dll

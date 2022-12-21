@@ -1,6 +1,6 @@
 # go-cloud-storage
 
-> 基于go-zero、xorm实现的轻量级云盘系统
+> 基于go-zero、xorm实现的云盘文件存储系统
 
 ```shell
 goctl api new server

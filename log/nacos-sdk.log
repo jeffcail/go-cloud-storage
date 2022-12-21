@@ -1,0 +1,2 @@
+2022-12-21T19:36:22.714+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/cache>
+2022-12-21T19:36:36.097+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/cache>

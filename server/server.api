@@ -1,0 +1,243 @@
+service server-api {
+	@handler User
+	post /user/login(LoginInput) returns (LoginOut)
+	
+	@handler UserDetail
+	get /user/detail(UserDetailInput) returns (UserDetailOut)
+	
+	@handler MailCodeSend
+	post /mail/code/send(MailCodeSendInput) returns (MailCodeSendOut)
+	
+	@handler UserRegister
+	post /user/register(UserRegisterInput) returns (UserRegisterOut)
+	
+	@handler ShareFileDetail
+	get /share/file/detail(ShareFileDetailInput) returns (ShareFileDetailOut)
+}
+
+@server (
+	middleware: Auth
+)
+service server-api {
+	@handler FileUpload
+	post /file/upload(FileUploadInput) returns (FileUploadOut)
+	
+	@handler UserRepositorySave
+	post /user/repository/save(UserRepositorySaveInput) returns (UserRepositorySaveOut)
+	
+	@handler UserFileList
+	get /user/file/list(UserFileListInput) returns (UserFileListOut)
+	
+	@handler UserFileNameUpdate
+	post /user/file/name/update(UserFileNameUpdateInput) returns (UserFileNameUpdateOut)
+	
+	@handler UserFloderCreate
+	post /user/floder/create(UserFloderCreateInput) returns (UserFloderCreateOut)
+	
+	@handler UserFileDelete
+	delete /user/file/delete(UserFileDeleteInput) returns (UserFileDeleteOut)
+	
+	@handler UserFileMove
+	put /user/file/move(UserFileMoveInput) returns (UserFileMoveOut)
+	
+	@handler ShareCrate
+	post /share/create(ShareCrateInput) returns (ShareCrateOut)
+	
+	@handler ShareSave
+	post /share/save (ShareSaveInput) returns (ShareSaveOut)
+	
+	@handler RefreshAuthorization
+	post /refresh/authorization(RefreshAuthorizationInput) returns (RefreshAuthorizationOut)
+	
+	@handler FileUploadPrepare
+	post /file/upload/prepare(FileUploadPrepareInput) returns (FileUploadPrepareOut)
+	
+	@handler FileUploadChunk
+	post /file/upload/chunk (FileUploadChunkInput) returns (FileUploadChunkOut)
+}
+
+type FileUploadChunkInput {
+	Hash string `json:"hash,optional"`
+	Name string `json:"name,optional"`
+	Ext  string `json:"ext,optional"`
+	Size int64  `json:"size,optional"`
+	Path string `json:"path,optional"`
+}
+
+type FileUploadChunkOut {
+	Identity string `json:"identity"`
+	Ext      string `json:"ext"`
+	Name     string `json:"name"`
+}
+
+type FileUploadPrepareInput {
+	Md5  string `json:"md5"`
+	Name string `json:"name"`
+	Ext  string `json:"ext"`
+}
+
+type FileUploadPrepareOut {
+	Identity string `json:"identity"`
+	UploadId string `json:"uploadId"`
+	Key      string `json:"key"`
+}
+
+type RefreshAuthorizationInput{}
+
+type RefreshAuthorizationOut {
+	Id           int    `json:"id"`
+	Name         string `json:"name"`
+	Token        string `json:"token"`
+	RefreshToken string `json:"refreshToken"`
+}
+
+type ShareSaveInput {
+	RepositoryIdentity string `json:"repositoryIdentity"`
+	ParentId           int    `json:"parentId"`
+}
+
+type ShareSaveOut {
+	Identity string `json:"identity"`
+}
+
+type ShareFileDetailInput {
+	Identity string `json:"identity"`
+}
+
+type ShareFileDetailOut {
+	Name               string `json:"name"`
+	Ext                string `json:"ext"`
+	Size               int64  `json:"size"`
+	Path               string `json:"path"`
+	RepositoryIdentity string `json:"repositoryIdentity"`
+}
+
+type ShareCrateInput {
+	RepositoryIdentity string `json:"repositoryIdentity"`
+	ExpiredTime        int    `json:"expiredTime"`
+}
+
+type ShareCrateOut {
+	Identity string `json:"identity"`
+}
+
+type UserFileMoveInput {
+	Identity       string `json:"identity"`
+	ParentIdentity string `json:"parentIdentity"`
+}
+
+type UserFileMoveOut {
+	Message string `json:"message"`
+}
+
+type UserFileDeleteInput {
+	Identity string `json:"identity"`
+}
+
+type UserFileDeleteOut {
+	Message string `json:"message"`
+}
+
+type UserFloderCreateInput {
+	ParentId int    `json:"parent_id"`
+	Name     string `json:"name"`
+}
+
+type UserFloderCreateOut {
+	Identity string `json:"identity"`
+}
+
+type UserFileNameUpdateInput {
+	Identity string `json:"identity"`
+	Name     string `json:"name"`
+}
+
+type UserFileNameUpdateOut {
+	Message string `json:"message"`
+}
+
+type UserFileListInput {
+	Id       int64 `json:"id,optional"`
+	Page     int   `json:"page,optional"`
+	PageSize int   `json:"pageSize,optional"`
+}
+
+type UserFileListOut {
+	List  []*UserFile `json:"list"`
+	Count int64       `json:"count"`
+}
+
+type UserFile {
+	Id                 int64  `json:"id"`
+	Name               string `json:"name"`
+	Size               int64  `json:"size"`
+	Identity           string `json:"identity"`
+	RepositoryIdentity string `json:"repositoryIdentity"`
+	Ext                string `json:"ext"`
+	Path               string `json:"path"`
+}
+
+type UserRepositorySaveInput {
+	ParentId           int    `json:"parentId"`
+	RepositoryIdentity string `json:"repositoryIdentity"`
+	Ext                string `json:"ext"`
+	Name               string `json:"name"`
+}
+
+type UserRepositorySaveOut {
+	Message string `json:"message"`
+}
+
+type FileUploadInput {
+	Hash string `json:"hash,optional"`
+	Name string `json:"name,optional"`
+	Ext  string `json:"ext,optional"`
+	Size int64  `json:"size,optional"`
+	Path string `json:"path,optional"`
+}
+
+type FileUploadOut {
+	Identity string `json:"identity"`
+	Ext      string `json:"ext"`
+	Name     string `json:"name"`
+}
+
+type UserRegisterInput {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+	Email    string `json:"email"`
+	Code     string `json:"code"`
+}
+
+type UserRegisterOut {
+	Message string `json:"message"`
+}
+
+type LoginInput {
+	Name     string `json:"name"`
+	Password string `json:"password"`
+}
+
+type LoginOut {
+	Id           int    `json:"id"`
+	Name         string `json:"name"`
+	Token        string `json:"token"`
+	RefreshToken string `json:"refreshToken"`
+}
+
+type UserDetailInput {
+	Identity string `json:"identity"`
+}
+
+type UserDetailOut {
+	Name  string `json:"name"`
+	Email string `json:"email"`
+}
+
+type MailCodeSendInput {
+	Email string `json:"email"`
+}
+
+type MailCodeSendOut {
+	Code string `json:"code"`
+}

@@ -1,0 +1,31 @@
+2022-12-21T19:01:02.977+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:01:03.000+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"cloud-storage.yml","group":"lottery"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2022-12-21T19:01:03.004+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"cloud-storage.yml","group":"lottery"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2022-12-21T19:01:03.009+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"cloud-storage.yml","group":"lottery"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2022-12-21T19:01:03.010+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:[404] config data not exist
+ 
+2022-12-21T19:01:03.010+0800	[33mWARN[0m	config_client/config_client.go:207	[client.GetConfig] config not found, dataId: cloud-storage.yml, group: lottery, namespaceId: .
+2022-12-21T19:02:20.088+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:03:14.245+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:07:19.187+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:07:42.771+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:07:54.820+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:08:58.613+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:09:08.295+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:09:23.078+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:10:45.522+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:11:05.283+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:11:29.571+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:12:28.298+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:13:29.685+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:14:14.944+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:36:55.559+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:37:13.261+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:38:06.543+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>
+2022-12-21T19:39:12.940+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:</Users/cc/project/github/go/cloud-storage/server/log>   cacheDir:</Users/cc/project/github/go/cloud-storage/server/cache>

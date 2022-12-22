@@ -2,6 +2,36 @@
 
 > 基于go-zero、xorm实现的云盘文件存储系统
 
+### 配置
+##### Mac/Linux
+```shell
+export MailFrom=""
+export MailTo=""
+export Mail163Pass=""
+export MailServer=""
+export MailServerPort=""
+
+export QiNiuAK=""
+export QiNiuSk=""
+export QiNiuBucket=""
+export QiuNiuUrl=""
+```
+
+##### Windows
+```cmd
+go env -w MailFrom=""
+go env -w MailTo=""
+go env -w Mail163Pass=""
+go env -w MailServer=""
+go env -w MailServerPort=""
+
+go env -w QiNiuAK=""
+go env -w QiNiuSk=""
+go env -w QiNiuBucket=""
+go env -w QiuNiuUrl=""
+```
+
+
 ```shell
 goctl api new server
 
